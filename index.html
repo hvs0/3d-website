@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    
+    <title>Futurastic Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <header>
+    <a href="#" class="logo">Future</a>
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+   </header> 
+   <section>
+    <img src="stars.png" id="stars">
+    <img src="moon.png" id="moon">
+    <img src="mountains_behind.png" id="mountains_behind">
+    <h2 id="text">Future Light</h2>
+    <a href="#sec" id="btn">Explore Future</a>
+    <img src="mountains_front.png" id="mountains_front">
+
+   </section>
+   <div class="sec" id="sec">
+    <h2>About Future</h2>
+    <p>The future is the time after the past and present. Its arrival is considered inevitable due to the existence of time and the laws of physics. Due to the apparent nature of reality and the unavoidability of the future, everything that currently exists and will exist can be categorized as either permanent, meaning that it will exist forever, or temporary, meaning that it will end.[1] In the Occidental view, which uses a linear conception of time, the future is the portion of the projected timeline that is anticipated to occur.
+        In special relativity, the future is considered absolute future, or the future light cone.
+        <br><br> the philosophy of time, presentism is the belief that only the present exists and the future and the past are unreal. Religions consider the future when they address issues such as karma, life after death, and eschatologies that study what the end of time and the end of the world will be. Religious figures such as prophets and diviners have claimed to see into the future. Future studies, or futurology, is the science, art, and practice of postulating possible futures. Modern practitioners stress the importance of alternative and plural futures, rather than one monolithic future, and the limitations of prediction and probability, versus the creation of possible and preferable futures. Predeterminism is the belief that the past, present, and future have been already decided.
+        <br><br>The concept of the future has been explored extensively in cultural production, including art movements and genres devoted entirely to its elucidation, such as the 20th-century movement futurism.
+        <br><br>In physics, time is the fourth dimension. Physicists argue that spacetime can be understood as a sort of stretchy fabric that bends due to forces such as gravity. In classical physics the future is just a half of the timeline, which is the same for all observers. In special relativity the flow of time is relative to the observer's frame of reference. The faster an observer is traveling away from a reference object, the slower that object seems to move through time. Hence, the future is not an objective notion anymore. A more modern notion is absolute future, or the future light cone. While a person can move backward or forwards in the three spatial dimensions, many physicists argue you are only able to move forward in time.
+       <br><br>One of the outcomes of Special Relativity Theory is that a person can travel into the future (but never come back) by traveling at very high speeds. While this effect is negligible under ordinary conditions, space travel at very high speeds can change the flow of time considerably. As depicted in many science fiction stories and movies (e.g. Déjà Vu), a person traveling for even a short time at near light speed will return to an Earth that is many years in the future.
+       <br><br>Some physicists claim that by using a wormhole to connect two regions of spacetime a person could theoretically travel in time. Physicist Michio Kaku points out that to power this hypothetical time machine and "punch a hole into the fabric of space-time" would require the energy of a star. Another theory is that a person could travel in time with cosmic strings.
+
+       
+    </p>
+   </div>
+
+   <script>
+     let stars = document.getElementById('stars');
+     let moon = document.getElementById('moon');
+     let mountains_behind = document.getElementById('mountains_behind');
+     let text = document.getElementById('text');
+     let btn = document.getElementById('btn');
+     let mountains_front = document.getElementById('mountains_front');
+     let header = document.querySelector('header');
+     window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+     })
+   </script>
+   </body>
+</html>
